@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>djikstra explanation</title>
+</head>
+
+<body>
+  <h1> <a href="https://namu.wiki/w/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98" target
+    ="_blank"> Djikstra Algorithm </a></h1>
+  <ol>
+    <li><a href="djik_1.html"> explanation </a></li>
+    <li><a href="djik_2.html"> made by djikstra</a></li>
+    <li><a href="djik_3.html"> code in git </a></li>
+  </ol>
+
+  <p>
+    음의 가중치가 없는 그래프에서 한 노드에서 다른 모든 노드까지의 최단거리를 구하는 알고리즘이다.
+
+    방향그래프, 무방향 그래프 모두 상관 없으나, 가중치가 음수인 edge가 단 하나라도 존재하면 이 알고리즘은 사용할 수 없다.
+
+    에츠허르 다익스트라가 고안한 알고리즘으로, 그가 처음 고안한 알고리즘은 O(V^2)O(V
+    2
+    )의 시간복잡도를 가졌다. 이후 우선순위 큐(=힙 트리)등을 이용한 더욱 개선된 알고리즘이 나오며, O(ElogV)O(ElogV)의 시간복잡도를 가지게 되었다.
+    O(ElogV)O(ElogV) 의 시간복잡도를 가지는 이유는 힙에 최악의 경우 EE번의 탐색한 노드를 집어넣는 경우가 발생하게 되는데, 이러한 경우에 O(ElogE)O(ElogE)의 시간 복잡도가 나오며, 중복 간선을 허용하지 않는 그래프라면 O(E) \leq O(V^2)O(E)≤O(V
+  2
+  ) 이므로 O(log E) \leq O(log V^2)O(logE)≤O(logV
+  2
+  )와 같다. 이때 O(log V^2) = O(2 \times logV)O(logV
+  2
+  )=O(2×logV) 이므로, 상수를 제거하면 O(ElogV)O(ElogV)가 된다. 물론 여기서 탐색에 소요되는 시간 O(V+E)O(V+E) 는 O(ElogV)O(ElogV)보다 작으므로 무시한다.
+
+  최단경로를 구하는 다른 알고리즘인 플로이드-워셜 알고리즘은 가능한 모든 노드쌍들에 대한 최단거리를 구하는 알고리즘인 반면, 다익스트라 알고리즘으로는 하나의 노드에서부터의 최단경로 밖에 구할 수 없다. 다만 시간은 플로이드 알고리즘이 더 오래걸리므로, 문제 상황에 따라 그때 그때 적합한 알고리즘을 사용하도록 하자.
+
+  다익스트라 알고리즘을 확장시킨 알고리즘이 A* 알고리즘이다.
+
+
+  </p>
